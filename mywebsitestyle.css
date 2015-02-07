@@ -4,6 +4,7 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-family: Verdana, sans-serif;
 }
 
 .wrapper1 {
@@ -23,7 +24,6 @@ body {
 }
 .wrapper1 a {
     text-decoration: none;
-    font-family: Verdana, sans-serif;
     color: black;
 }
 .wrapper1 li:hover {
@@ -43,12 +43,11 @@ body {
     margin-top: 250px;
 }
 .wrapper2 li {
-    float: left;
-    float: right;
     width: 350px;
+    float: left;
+    float:right;
 }
 .wrapper2 p {
-    font-family: Verdana, sans-serif;
     font-size: 25px;
 }    
 #white {
@@ -60,23 +59,21 @@ body {
 }
 
 #photo {
-    font-family: Verdana, sans-serif;
     font-style: italic;
     font-size: 12px;
     color: white;
     margin-top: 250px; 
     float: right;
 }
-
 #photo a {
-    text-decoration: ;
+    text-decoration: none;
 }
 #photo a:link {
-   color: white;
+    color: white;
 }
 #photo a:visited {
-   color: #8e2525;
+    color: #8e2525;
 }
 #photo a:hover {
-   color: white;
+    color: white;
 }
