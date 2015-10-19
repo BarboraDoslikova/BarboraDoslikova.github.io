@@ -15,7 +15,7 @@
 body {
   font-family: "Merriweather", serif;
   line-height: 1.5;
-  background: url(../images/background-1.jpg) no-repeat fixed;
+  background: url(background-1.jpg) no-repeat fixed;
   background-position: 50%;
   background-size: cover;
 }
@@ -136,7 +136,7 @@ header {
 /* DATA SKILLS
 --------------*/
 .skills {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/background-2.jpg) no-repeat fixed 50%;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(background-2.jpg) no-repeat fixed 50%;
   background-size: cover;
   text-align: center;
   font-size: 20px;
