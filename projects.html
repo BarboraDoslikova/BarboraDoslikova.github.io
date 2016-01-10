@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Barbora Doslikova, PhD. | Data Scientist</title>
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600|Merriweather|Pacifico" rel="stylesheet" type="text/css">
+		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="normalize.css">
+		<link rel="stylesheet" href="style.css">
+
+		<script src="scripts/prefixfree.min.js"></script>
+		
+	</head>
+	<body>
+
+		<!-- MENU -->
+		<ul class="menu">
+      		<li><a href="index.html"><i class="fa fa-home"></i></a></li>
+      		<li><a href="#project1">Project 1</a></li>
+    	</ul>
+
+		<!-- projects -->
+		<section id="project1" class="project1">
+			<div class="content-wrap">
+				<h2>Project 1: Investigating Trends in Icelandic Accidents</h2>
+				<h3>Have Icelanders suffered from more or less accidents over the time?</h3>
+				<p>I fell in love with Iceland, the country known for Vikings, volcanoes and a variety of natural wonders, on my first visit and vowed to come back, which I did only a couple of years later.</p>
+				<img class="image" src="images/aurora-borealis.jpg" alt="aurora borealis">
+				<p>As much Iceland is known for Northern Lights watching, I am known for being prone to minor and major accidents.</p>
+				<p>So when it was time for my first foray into data science, my eyes naturally fell on a data set that let me explore the trends in Icelandic accidents.</p>
+				<p><span>I asked: Have Icelanders suffered from more or less accidents over the time?</span></p>
+				<p>You can check my code in <a href="https://github.com/BarboraDoslikova/health-Iceland">this GitHub repository</a> and view the annotated analysis in <a href="https://github.com/BarboraDoslikova/health-Iceland/blob/master/scriptHealthIcelandV2.ipynb">this IPython Notebook</a>.</p>
+
+				<h3>Tools used</h3>					
+				<div class="skills-circles">
+					<ul>
+					    <li><span>pandas</span></li>
+					    <li><span>matplotlib</span></li>
+					    <li><span>pylab</span></li>
+					    <li><span>SciPy</span></li>
+					    <li><span>seaborn</span></li>
+					    <li><span>IPython Notebook</span></li>
+				    </ul>
+				</div>
+				<h3>How It Went</h3>
+				<div>
+				<h4>Get Data</h4>	
+				<p>I downloaded the data from the <a href="http://www.statice.is/?PageID=1282&src=https://rannsokn.hagstofa.is/pxen/Dialog/varval.asp?ma=HEI12001%26ti=Accidents+reported+to+the+State+Social+Security+Institute+1964-2012++%26path=../Database/heilbrigdismal/slys/%26lang=1%26units=Number">State Social Security Institute and Icelandic Health Insurance website</a> in a csv file. The data were last updated on 10th January 2014 and included the number of accidents and the number of fatal accidents in Iceland between the years 1964 and 2012 expressed as the number of accidents per 100,000 individuals.</p>
+				<p>This is important as the population in 2012 was at 170% of that in 1964 and not accounting for this would bias the results for more accidents in the later years making Icelanders appear more clumsy, which we don't want!</p>
+				<h4>Read Data</h4>
+				<p>I used the <a href="https://github.com/BarboraDoslikova/health-Iceland/blob/master/scriptHealthIcelandV2.ipynb">IPython Notebook</a> for the actual analysis as it allows easy documentation of the steps and sharing of the results - which are so important for data scientists.</p>
+
+				<pre class="prettyprint lang-py">
+def read_file(name='healthIceland.csv'):
+	# open data direcly as pandas.core.frame.DataFrame
+	df = pd.read_csv(name)
+	# assign the proper column name 'Year' to the 1st column 
+	df.columns = ['Year', 'Total accidents', 'Total fatal accidents']
+	return df
+				</pre>
+
+				<p>I loaded the data into a pandas data frame. I love working with pandas because they allow for easy computation, basic statistical analysis and visualisation - everything I needed for this analysis! I also added a 4th column to the data set which included the calculated number of fatal accidents as a percentage of total accidents.</p>
+				<h4>Look At Changes Over Time</h4>
+				<p>It was time to look at the changes in accident over time. From simple plots, I learned that is seemed that the number of accidents in Iceland has been steadily increasing with a bump of even more accidents between 1990-2000. Have there perhaps been more accident-prone tourists in that time?</p>
+				<img class="big-image" src="images/no-of-accidents.png" alt="graph of the number of accidents over time">
+				<p>On the other hand, it seemed that the number of fatal accidents has been going down steadily. Perhaps due to advances in the Icelandic health care?</p>
+				<img class="big-image" src="images/no-of-fatal-accidents.png" alt="graph of the number of fatal accidents over time">
+				<p>I wanted to know if these changes over time were statistically significant. To determine whether to use parametric or non-parametric tests I looked at the distribution of the data (which pointed at non-parametric)</p>
+				<img class="big-image" src="images/acc-histograms.png" alt="histogrms">
+				<p>and then ran scipy's skew, kurtosis and normal tests (with pylab's plots), which confirmed that non-parametric - Spearmen's correlation - tests will be in order. Spearmen's correlation tests then let me conclude that the changes over time were statistically significant.</p>
+				<img class="big-image" src="images/no-of-accidents-sig.png" alt="graph of the number of accidents over time">
+                <img class="big-image" src="images/no-of-fatal-accidents-sig.png" alt="graph of the number of fatal accidents over time">
+				<h3>Sum It Up</h3>
+				<p>I learned that the number of accidents in Iceland has significantly increased over time, with a curious further increase in the 10-year period between 1990-2000. I would be curious to find out why that is the case. I suspect there were more tourists in that time?</p>
+				<p>I have aso learned that the number of fatal accidents in Iceland has significanly decreased over time. There I suspect improvements in health care.</p>
+			</div>
+			</div>
+		</section>
+
+	</body>
+</html>

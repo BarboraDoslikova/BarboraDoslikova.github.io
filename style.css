@@ -73,6 +73,7 @@ li {
 
 /* COMMON SECTION STYLES 
 -------------------------*/
+
 .faq, 
 .relevant-skills,
 .courses,
@@ -83,8 +84,12 @@ li {
   background: #fefefe; /* white */
 }
 
+.profile {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+}
+
 .gap,
-.profile,
 .skills,
 .work-experience,
 .awards,
@@ -100,7 +105,7 @@ li {
   background-size: cover;
 }
 
-/* MENU
+/* MENU & SECOND RESUME MENU
 ---------*/
 .menu {  
   list-style: none;
@@ -109,22 +114,32 @@ li {
   position: fixed;
   text-align: center;
   border-bottom: 1px solid #434A5C;
-  background: #42b59a;
+  background: #42b59a; /* darker green */
   width: 100%;
   z-index: 5;
+}
+.second-menu {
+  margin-top: 52px;
+  background: #64c6af; /* darker green - 2x lighter */
+}
+.online-resume .big-header {
+    padding-bottom:80px;
 }
 .menu li {
   display: inline-block;
   padding: 8px 25px;
   font-size: 16px;
-  background: #16a085;  
+  background: #16a085;  /* lighter green */
+}
+.second-menu li {
+  background: #19b698;  /* lighter green */; 
 }
 /*.menu li:first-child, .menu li:last-child {
   border: 1px solid #434A5C; 
 }*/
 .menu a {
   text-decoration: none;
-  color: #333333;
+  color: #333333;  /* dark grey */
   font-weight: bold;
   text-transform: uppercase;
   font-family: "Open Sans", sans-serif;
@@ -151,6 +166,7 @@ header {
   padding: 18px;
   text-decoration: none;
 }
+
 
 /* ABOUT ME / PROFILE
 ----------------------*/
@@ -180,6 +196,23 @@ header {
   margin-right: 3%;
   border: 1px solid #ddd;
   border-radius: 50%;
+}
+
+/* ONLINE RESUME
+----------------------*/
+.relevant-skills h2,
+.skills h2,
+.courses h2,
+.work-experience h2,
+.education h2,
+.awards h2,
+.interests h2
+ {
+  color: yellow;
+  margin-top: 70px;
+}
+.relevant-skills h2:first-child {
+  margin-top: 0px;
 }
 
 /* DATA SKILLS
@@ -335,35 +368,58 @@ footer {
   font-weight: bold;
 }
 
-/* RESIZING
+/* RESIZING ALL
 --------------*/
 @media screen and (max-width: 704px) {
   .big-header {
     padding-bottom:40px;
+  }
+  .second-menu {
+    margin-top: 98px;
   }
 }
 @media screen and (max-width: 394px) {
   .big-header {
     padding-bottom:90px;
   }
-}
-@media screen and (max-width: 1217px) {
-  .online-resume .big-header {
-    padding-bottom:40px;
+  .second-menu {
+    margin-top: 144px;
   }
 }
-@media screen and (max-width: 668px) {
+/* RESIZING ONLINE-RESUME
+--------------*/
+@media screen and (max-width: 1077px) {
   .online-resume .big-header {
-    padding-bottom:90px;
+    padding-bottom:125px;
+  }
+}
+@media screen and (max-width: 694px) {  
+.online-resume .big-header {
+    padding-bottom:173px;
+  }
+}
+@media screen and (max-width: 589px) {
+  .online-resume .big-header {
+    padding-bottom:208px;
   }
 }
 @media screen and (max-width: 430px) {
   .online-resume .big-header {
-    padding-bottom:140px;
+    padding-bottom:248px;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 389px) {
   .online-resume .big-header {
-    padding-bottom:190px;
+    padding-bottom:298px;
+  }
+}
+@media screen and (max-width: 340px) {
+  .online-resume .big-header {
+    padding-bottom:298px;
+  }
+}/* GOOD */
+@media screen and (max-width: 320px) {
+  .online-resume .big-header {
+    padding-bottom:338px;
   }
 }
