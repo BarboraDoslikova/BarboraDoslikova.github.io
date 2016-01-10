@@ -206,9 +206,7 @@ header {
 .work-experience h2,
 .education h2,
 .awards h2,
-.interests h2
- {
-  color: yellow;
+.interests h2 {
   margin-top: 70px;
 }
 .relevant-skills h2:first-child {
