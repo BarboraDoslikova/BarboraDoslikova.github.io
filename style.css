@@ -306,8 +306,8 @@ header {
 
 .social {
   width: 50%;
-  float: right;
-  text-align: right;
+  float: left;
+  text-align: left;
   font-size: 30px;
 }
 .social a {
@@ -320,7 +320,7 @@ header {
 footer {
   clear: both;
   font-size: 12px;
-  margin-top: 50px;
+  margin-top: 8em;
 }
 
 /* PORTFOLIO
@@ -368,9 +368,17 @@ footer {
 
 /* RESIZING ALL
 --------------*/
-@media screen and (max-width: 704px) {
+@media screen and (max-width: 754px) {
   .big-header {
-    padding-bottom:40px;
+    padding-bottom: 40px;
+  }
+  .second-menu {
+    margin-top: 47px;
+  }
+}
+@media screen and (max-width: 623px) {
+  .big-header {
+    padding-bottom: 40px;
   }
   .second-menu {
     margin-top: 98px;
@@ -378,10 +386,10 @@ footer {
 }
 @media screen and (max-width: 394px) {
   .big-header {
-    padding-bottom:90px;
+    padding-bottom: 40px;    
   }
   .second-menu {
-    margin-top: 144px;
+    margin-top: 98px;
   }
 }
 /* RESIZING ONLINE-RESUME
@@ -393,7 +401,7 @@ footer {
 }
 @media screen and (max-width: 694px) {  
 .online-resume .big-header {
-    padding-bottom:173px;
+    padding-bottom:123px;
   }
 }
 @media screen and (max-width: 589px) {
@@ -408,12 +416,12 @@ footer {
 }
 @media screen and (max-width: 389px) {
   .online-resume .big-header {
-    padding-bottom:298px;
+    padding-bottom:270px;    
   }
 }
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 355px) {
   .online-resume .big-header {
-    padding-bottom:298px;
+    padding-bottom:262px;
   }
 }/* GOOD */
 @media screen and (max-width: 320px) {
