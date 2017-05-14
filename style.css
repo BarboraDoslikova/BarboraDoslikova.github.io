@@ -119,7 +119,7 @@ li {
   z-index: 5;
 }
 .second-menu {
-  margin-top: 52px;
+  margin-top: 51px;
   background: #64c6af; /* darker green - 2x lighter */
 }
 .online-resume .big-header {
@@ -373,7 +373,7 @@ footer {
     padding-bottom: 40px;
   }
   .second-menu {
-    margin-top: 47px;
+    margin-top: 47px;    
   }
 }
 @media screen and (max-width: 623px) {
